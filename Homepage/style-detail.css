@@ -1,0 +1,38 @@
+
+body, html {
+  height: 100%;
+  margin: 0; 
+  color: white;
+}
+
+.bg{
+    background-image: url("../Reference/fix.png"), url("../Reference/fix.png");
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position: left , right bottom;
+    background-size: cover;
+  }
+ .material-icon{
+  position: left;
+  font-size: 10em;
+
+ } 
+ 
+  div.a {
+    height: 50px;
+    width: 5%;
+   font-size: 150%;
+  }
+
+
+#corners{
+  border-radius: 25px;
+  background: #04070e;
+  padding: 30px; 
+  width: 150px;
+  height: 20px; 
+  text-align: center;
+}
+ 
+
