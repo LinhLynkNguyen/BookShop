@@ -6,9 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purchase</title>
     <link rel="stylesheet" href="style-purchase.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="background"></div>
     <div class="menuBar">Menu Bar</div>
-    <div class="purchaseList"><span>purchase List</span></div>
+    <div class="board">
+        <span style="position: absolute;top: -35px;font-size: 25px;left: 10px;font-family: 'Coiny', cursive;">Giỏ hàng</span>
+        <div class="products">
+            <div class="product">
+                <div class="image"><img class="book-image"></div>
+                <div class="productName">Nhà giả kim</div>
+                <div class="amount">
+                    <button class="decrease">-</button>
+                    <span class="number">5</span>
+                    <button class="increase">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="priceContainer">
+            <div class="price">
+                <div class="priceTemp">Tính tạm: 20 triệu <br>Giảm giá: 20%</div>
+                <div class="priceSum"></div>
+            </div>
+            <button class="purchaseButton">Purchase</button>
+        </div>
+    </div>
+    <script src="script-pruchase.js"></script>
 </body>
 </html>
