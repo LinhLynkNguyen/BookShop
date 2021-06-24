@@ -1,8 +1,10 @@
 {
     "Books" : [
         {
-            "id": "001",
-            "name": "Conan"
+            "id": "1",
+            "name": "Conan",
+            "description": "Tham tu lung danh",
+            "price": 20000
         }
     ]
 }
