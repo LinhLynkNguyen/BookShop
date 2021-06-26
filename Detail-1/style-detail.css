@@ -36,22 +36,21 @@ img{
 }
 .product{
     display: flex;
-    align-items: center;
+    align-items: center; 
     position: relative;
+    height: 400px;
     grid-column: 1/1;
     background-color: whitesmoke;
 }
 .productName{
     font-size: 30px;
     position: absolute;
-    top: 50px;
-    left: 360px;
+    top: 20px;
 }
 .image{
     width: 250px;
     height: auto;
     margin-left: 30px;
-    margin-bottom: 50px;
 }
 .amount{
     position: absolute;

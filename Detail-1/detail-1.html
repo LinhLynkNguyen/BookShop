@@ -15,11 +15,11 @@
     <div class="bookDetail">
         <div class="product">
             <div class="image"><img id="bookImage"></div>
-            <div class="productName">Nhà giả kim</div>
+            <div id="productName">Loading...</div>
             <div class="amount">
-                <button class="decrease">-</button>
-                <span class="number">5</span>
-                <button class="increase">+</button>
+                <button class="decrease" onclick="Decrease()">-</button>
+                <span id="number">1</span>
+                <button class="increase" onclick="Increase()">+</button>
             </div>
             <button class="purchaseButton" id="1" onclick="putIntoStorage()">Purchase</button>
         </div>

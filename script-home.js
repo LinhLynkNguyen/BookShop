@@ -28,6 +28,11 @@ database = {
                 "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ..."
             ],
             "image":"../Assets/ChuyenConMeoDayHaiAuBay.jpg"
+        },
+        {
+            "id":3,
+            "name":"Hoàng tử bé",
+            "image":"../Reference/Hoangtube.jpg"
         }
     ]
 }
