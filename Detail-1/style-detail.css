@@ -1,14 +1,15 @@
 body{
     margin: 0px;
-    display: flex;
-    justify-content: center;
     position: relative;
-    height: 200vh;
+    height: 450vh;
 }
 img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
+
+
+
 .background{
     position: fixed;
     background-image: url(../Assets/background.png);
@@ -17,40 +18,60 @@ img{
     z-index: -1;
     background-size: cover;
 }
-.menuBar{
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    overflow: hidden;
-    display: flex;
-    background-color: burlywood;
-    z-index: 1;
-}
+
+
+
+#corners{
+    border-radius: 25px;
+    background: #a3e4f5;
+    padding: 30px; 
+    width: 100px;
+    height: 20px; 
+    text-align: center;
+  }
+  .material-icon{
+    position: right;
+    font-size: 100em;
+   } 
+
+
+
 .bookDetail{
     position: relative;
     top: 150px;
     height: 400px;
+    left: 50px;
     width: 900px;
     display: grid;
     grid-template-columns: 6fr 10px 2fr;
 }
 .product{
-    display: flex;
-    align-items: center; 
+    display: grid;
+    grid-template-columns: 2fr 3fr;
     position: relative;
     height: 400px;
     grid-column: 1/1;
     background-color: whitesmoke;
 }
-.productName{
+#productName{
     font-size: 30px;
+    font-family: 'Viaoda Libre', cursive;
     position: absolute;
+    left: 300px;
     top: 20px;
+}
+#price{
+    font-size: 30px;
+    font-family: 'Viaoda Libre', cursive;
+    position: absolute;
+    left: 300px;
+    top: 100px;
 }
 .image{
     width: 250px;
-    height: auto;
+    height: 280px;
     margin-left: 30px;
+    margin-top: 20px;
 }
 .amount{
     position: absolute;
@@ -69,10 +90,52 @@ img{
 .purchaseButton:hover{
     background-color: #ff7d66;
 }
-.discount{
+.seller-info{
     grid-column: 3/span1;
     background-color: whitesmoke;
 }
+
+
+#description{
+    background-color: whitesmoke;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    top: 220px;
+    left: 50px;
+    width: 865px;
+    height: 80px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.description-title{
+    font-size: 30px;
+    position: relative;
+    top: 210px;
+    left: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.description-expand{
+    height: 550px !important;
+}
+.show{
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    left: 430px;
+}
+
+
+.comment{
+    position: relative;
+    width: 905px;
+    height: 400px;
+    background-color: whitesmoke;
+    top: 350px;
+    left: 50px;
+}
+
+
 .footer{
     width: 100%;
     height: 200px;

@@ -31,3 +31,5 @@ setInterval(() => {
     }
     purchaseItems = values;
 }, 500);
+
+createBook();

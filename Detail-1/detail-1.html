@@ -8,23 +8,41 @@
     <link rel="stylesheet" href="style-detail.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="script-detail.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div class="background"></div>
-    <div class="menuBar">Menu Bar</div>
+    <a href="../HomePage/index.html">
+        <p id="corners"><i class="material-icons">home</i>  Home</p>
+    </a>
     <div class="bookDetail">
         <div class="product">
             <div class="image"><img id="bookImage"></div>
-            <div id="productName">Loading...</div>
-            <div class="amount">
-                <button class="decrease" onclick="Decrease()">-</button>
-                <span id="number">1</span>
-                <button class="increase" onclick="Increase()">+</button>
+            <div class="info">
+                <div id="productName">Loading...</div>
+                <div id="price"></div>
+                <div class="amount">
+                    <button class="decrease" onclick="Decrease()">-</button>
+                    <span id="number">1</span>
+                    <button class="increase" onclick="Increase()">+</button>
+                </div>
+                <button class="purchaseButton" id="1" onclick="putIntoStorage()">Purchase</button>
             </div>
-            <button class="purchaseButton" id="1" onclick="putIntoStorage()">Purchase</button>
+            
         </div>
-        <div class="discount"></div>
+        <div class="seller-info">
+            
+        </div>
     </div>
+    <span class="description-title">Mô tả</span>
+    <div id="description">
+        <button class="show" onclick="show()">Show more</button>
+    </div>
+    <div class="comment"></div>
     <div class="footer"></div>
 </body>
 </html>
