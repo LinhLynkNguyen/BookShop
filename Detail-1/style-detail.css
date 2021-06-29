@@ -73,6 +73,27 @@ img{
     margin-left: 30px;
     margin-top: 20px;
 }
+
+.collection{
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#image_container{
+    display: flex;
+    justify-content: left;
+    height: 80px;
+    margin-left: 5px;
+}
+.collection-image{
+    width: 60px;
+    height: 70px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
 .amount{
     position: absolute;
     left: 360px;
@@ -93,6 +114,21 @@ img{
 .seller-info{
     grid-column: 3/span1;
     background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 2fr 3fr 4fr;
+    height: 400px;
+}
+#sellerName{
+    background-color: yellow;
+    width: 100%;
+}
+#rating{
+    background-color: red;
+    width: 100%;
+}
+#commit{
+    background-color: violet;
+    width: 100%;
 }
 
 
@@ -107,6 +143,7 @@ img{
     height: 80px;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+    transition-duration: 1000ms;
 }
 .description-title{
     font-size: 30px;
@@ -115,9 +152,27 @@ img{
     left: 50px;
     font-family: 'Roboto', sans-serif;
 }
-.description-expand{
-    height: 550px !important;
+@keyframes expand{
+    from {height: 80px;}
+    to {height: 550px;}
 }
+@keyframes shrink{
+    from {height: 550px;}
+    to {height: 80px;}
+}
+.description-expand{
+    animation: expand;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.description-shrink{
+    animation: shrink;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 .show{
     border: none;
     position: absolute;

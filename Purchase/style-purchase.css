@@ -56,6 +56,10 @@ img{
     align-items: center;
     margin-top: 10px;
     position: relative;
+    left: -5000px;
+}
+.productClone{
+    left: 0px !important;
 }
 .productName{
     margin-left: 50px;

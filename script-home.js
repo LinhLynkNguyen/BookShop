@@ -12,7 +12,8 @@ database = {
                 "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ..."
             ],
             "image":"../Assets/NhaGiaKim.jpg",
-            "discount":"10%"
+            "discount":"10%",
+            "amount":0
         },
         {
             "id":2,
@@ -29,7 +30,8 @@ database = {
                 "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ..."
             ],
             "image":"../Assets/ChuyenConMeoDayHaiAuBay.jpg",
-            "discount":"No Discount"
+            "discount":"No Discount",
+            "amount":0
         },
         {
             "id":3,
@@ -45,7 +47,16 @@ database = {
                 "Giá sản phẩm trên Tiki đã bao gồm thuế theo luật hiện hành. Tuy nhiên tuỳ vào từng loại sản phẩm hoặc phương thức, địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như phí vận chuyển, phụ phí hàng cồng kềnh, ....."
             ],
             "image":"../Reference/Hoangtube.jpg",
-            "discount":"90%"
+            "images":[
+                "../Assets/HoangTuBe1.jpg",
+                "../Assets/HoangTuBe2.jpg",
+                "../Assets/HoangTuBe3.jpg",
+                "../Reference/Hoangtube.jpg"
+            ],
+            "discount":"90%",
+            "seller":"Quân Đàm",
+            "rating":'4/5 <i class="fas fa-star"></i>',
+            "amount":0
         }
     ]
 }
@@ -69,5 +80,5 @@ function openDetail(event) {
     let detailWindow = window.open("../Detail-1/detail-1.html");
     setTimeout(()=>{
         detailWindow.postMessage(bookTemp,"http://127.0.0.1:5500");
-    },500);
+    },10);
 }
