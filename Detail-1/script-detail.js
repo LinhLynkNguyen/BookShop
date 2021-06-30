@@ -86,13 +86,25 @@ function show() {
     }
 }
 function putIntoStorage() {
-    let bookName = JSON.stringify(book.name);
-    let bookId = JSON.stringify(book.id);
-    let bookImage = JSON.stringify(book.image);
-    let bookPrice = JSON.stringify(book.price);
-    let packet = [bookId,bookName,bookImage,bookPrice,amount];
+    // let bookName = JSON.stringify(book.name);
+    // let bookId = JSON.stringify(book.id);
+    // let bookImage = JSON.stringify(book.image);
+    // let bookPrice = JSON.stringify(book.price);
+    let packet = [book.id,book.name,book.image,book.price,amount];
     let bookToStorage = JSON.stringify(packet);
-    localStorage.setItem(id,bookToStorage);
+    localStorage.setItem(book.id,bookToStorage);
+    if(localStorage.getItem("-1")==null)
+    {
+        let listOfAmount = [];
+    }
+    else
+    {
+        listOfAmount = localStorage.getItem("-1");
+        listOfAmount = JSON.parse(listOfAmount);
+    }
+    listOfAmount[book.id]=amount;
+    listOfAmount = JSON.stringify(listOfAmount);
+    let amountOfEachBook = localStorage.setItem("-1",listOfAmount);
     let purchaseWindow = window.open('../Purchase/purchase.html');
     setTimeout(() => {
         purchaseWindow.postMessage(book.id,"http://127.0.0.1:5500");

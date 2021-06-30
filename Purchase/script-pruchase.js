@@ -3,66 +3,55 @@ let purchaseItems;
 
 let amountOfProduct = 0;
 let books = []
-let id;
 
-function getDataFromLocalstorage(id) {
-    let book = localStorage.getItem(id);
-    book = JSON.parse(book);
-    let booksLocalStorage = localStorage.getItem("-1");
-    // Nếu trong local storage không có gì
-    if(booksLocalStorage==null)
-    {
-        booksLocalStorage[id] = book;
-    }
-    else
-    {
-        booksLocalStorage = JSON.parse(booksLocalStorage);
-        booksLocalStorage[id][4] += book[4];
-        let packet = JSON.stringify(booksLocalStorage);
-        localStorage.setItem("-1",packet);
-    }
-}
+function createBook(id,amount) {
+    console.log(id);
+    let newBook = localStorage.getItem(id);
+    newBook = JSON.parse(newBook);
 
-function getId(event) {
-    id = event.data;
-    getDataFromLocalstorage(id);
-}
-
-window.addEventListener("message",getId,false);
-
-
-
-function createBook(event) {
     setTimeout(() => {
-    let newBookId = event.data;
     
     let product = document.createElement("div");
     product.classList.add("product");
     //  tạo các element
     let image = document.createElement("div");
+    let bookImage = document.createElement("img")
     let productName =document.createElement("div");
-    let amount = document.createElement("div");
+    let amountField = document.createElement("div");
     let decreaseButton =document.createElement("button");
     let increaseButton = document.createElement("button");
     let number = document.createElement("span");
+    let price = document.createElement("span");
     
+    //assign value to product
+    number.innerHTML = amount;
+    bookImage.src = newBook[2];
+    productName.innerHTML = newBook[1];
+    price.innerHTML = newBook[3];
+    decreaseButton.innerHTML = "-";
+    increaseButton.innerHTML = "+";
+
     //appendChild
     product.appendChild(image);
     product.appendChild(productName);
-    product.appendChild(amount);
-    amount.appendChild(decreaseButton);
-    amount.appendChild(number);
-    amount.appendChild(increaseButton);
+    product.appendChild(amountField);
+    product.appendChild(price);
+    image.appendChild(bookImage);
+    amountField.appendChild(decreaseButton);
+    amountField.appendChild(number);
+    amountField.appendChild(increaseButton);
 
-    //add class
+    //add class and id
     product.classList.add("product");
     product.classList.add("productClone");
     image.classList.add("image");
     productName.classList.add("productName");
-    amount.classList.add("amount");
+    amountField.classList.add("amount");
     decreaseButton.classList.add("decrease");
     increaseButton.classList.add("increase");
     number.classList.add("number");
+    price.classList.add("bookPrice");
+    number.id = id;
 
     let products = document.getElementsByClassName("products");
     products = products[0];
@@ -71,16 +60,54 @@ function createBook(event) {
     }, 100);
 }
 
-window.addEventListener("message",createBook,false);
+function getDataFromLocalstorage() {
+    setTimeout(() => {
+        let listOfAmount = localStorage.getItem("-1");
+        listOfAmount = JSON.parse(listOfAmount);
+        for (let index = 0; index < listOfAmount.length; index++) {
+            if(listOfAmount[index]!=null)
+            {
+                createBook(index,listOfAmount[index]);
+            }
+        }
+    }, 200);
+ 
 
 
-setInterval(() => {
-    var values = [],
-        keys = Object.keys(localStorage),
-        i = keys.length;
+    // let book = localStorage.getItem(id);
+    // book = JSON.parse(book);
+    // let booksLocalStorage = localStorage.getItem("-1");
+    // booksLocalStorage = JSON.parse(booksLocalStorage);
+    // // Nếu trong local storage không có gì
+    // if(booksLocalStorage==null)
+    // {
+    //     booksLocalStorage[id] = book;
+    // }
+    // else
+    // {
+    //     booksLocalStorage[id][4] += book[4];
+    //     let packet = JSON.stringify(booksLocalStorage);
+    //     localStorage.setItem("-1",packet);
+    // }
+}
 
-    while ( i-- ) {
-        values.push( localStorage.getItem(keys[i]) );
-    }
-    purchaseItems = values;
-}, 500);
+function getId() {
+    setTimeout(() => {
+        getDataFromLocalstorage();
+    }, 500);
+}
+
+window.addEventListener("load",getId,false);
+// window.addEventListener("message",getId,false);
+
+
+// setInterval(() => {
+//     var values = [],
+//         keys = Object.keys(localStorage),
+//         i = keys.length;
+
+//     while ( i-- ) {
+//         values.push( localStorage.getItem(keys[i]) );
+//     }
+//     purchaseItems = values;
+// }, 500);
