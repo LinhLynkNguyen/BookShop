@@ -1,0 +1,13 @@
+Kagali -> Fork (Linh)
+
+1. PC: (git clone Linh)
+    1.1 Mặc định khi clone về sẽ có => git remote origin (đường dẫn tới Repo của Link)
+2. git remote add upstream URL của Kagali
+
+Mỗi mình code nè
+3. git add , git commit (Done ✅)
+
+4. git push origin master ( em đưa code lên Repo của EM [Linh])
+
+Bước để merge (ghép code) với Kagali
+1. Lên UI github  , Pull Request
