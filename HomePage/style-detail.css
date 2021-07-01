@@ -2,11 +2,11 @@
 body, html {
   height: 100%;
   margin: 0; 
-  color: white;
+  color: rgb(12, 12, 12);
 }
 
 .bg{
-    background-image: url("../Reference/fix.png"), url("../Reference/fix.png");
+    background-image: url("../Reference/mmm.png"), url("../Reference/mmm.png");
     height: 100%;
     width: 100%;
     background-repeat:no-repeat;
@@ -18,21 +18,60 @@ body, html {
   font-size: 10em;
 
  } 
- 
-  div.a {
-    height: 50px;
-    width: 5%;
-   font-size: 150%;
-  }
-
-
-#corners{
+ #corners{
   border-radius: 25px;
-  background: #bcc7e0;
+  background-color: azure;
   padding: 30px; 
-  width: 150px;
-  height: 20px; 
+  width: 80px;
+  height:0.05vmin; 
+  text-align: center;
+  position:fixed;
+ }
+ 
+ .button {
+  border: none;
+  color: rgb(241, 222, 222);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  position: fixed;
+}
+
+.button1 {
+  background-color: rgb(205, 223, 223); 
+  color: black; 
+  
+  border: 2px solid #f4f7f4;
+}
+
+.button1:hover {
+  background-color:black;
+  color:cornsilk;
+}
+
+div.a{
+  position: relative;
+  size:50pc;
+  color:rgb(240, 218, 218);
+
+}
+figure {
+  display: inline-block;
+  /*border: 1px dotted rgb(226, 197, 197);*/
+  margin: 20px; /* adjust as needed */
+}
+figure img {
+  vertical-align: top;
+}
+figure figcaption {
+  /*border: 1px dotted rgb(23, 23, 90);*/
   text-align: center;
 }
- 
+
+
 
