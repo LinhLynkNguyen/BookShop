@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onload="getId()">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,18 +12,16 @@
 </head>
 <body>
     <div class="background"></div>
-    <div class="menuBar">Menu Bar</div>
     <div class="board">
         <span style="position: absolute;top: -35px;font-size: 25px;left: 10px;font-family: 'Coiny', cursive;">Giỏ hàng</span>
-        <div class="products">
-            <div class="product">
-                <div class="image"><img class="book-image"></div>
-                <div class="productName">Nhà giả kim</div>
-                <div class="amount">
-                    <button class="decrease">-</button>
-                    <span class="number">5</span>
-                    <button class="increase">+</button>
-                </div>
+        <div class="products"></div>
+        <div class="product">
+            <div class="image"><img class="book-image"></div>
+            <div class="productName">Nhà giả kim</div>
+            <div class="amount">
+                <button class="decrease">-</button>
+                <span class="number">5</span>
+                <button class="increase">+</button>
             </div>
         </div>
         <div class="priceContainer">
